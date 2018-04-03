@@ -1,0 +1,29 @@
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		text-shadow: 1px 1px rgba(0,0,0,.35);
+	}
+	
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	svg {
+		color: #ffd700;
+	}
+
+	svg:hover{
+		color: #c7a800;
+	}
+}
