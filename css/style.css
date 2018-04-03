@@ -368,7 +368,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  color: #FFF;
+  color: #8ec11a;
   font-family: 'Voltaire', sans-serif; }
 
 p {
@@ -433,10 +433,10 @@ hr {
   margin-bottom: 1.5em; }
 
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 1.5em 0em; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
 
 ol {
   list-style: decimal; }
@@ -597,7 +597,7 @@ a {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-  display: block; }
+  display: inline-block; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
