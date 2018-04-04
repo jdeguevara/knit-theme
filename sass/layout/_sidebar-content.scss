@@ -1,5 +1,5 @@
 .content-area {
-	float: right;
+	float: left;
 	margin: 0 0 0 (-$size__site-sidebar);
 	width: $size__site-main;
 }
@@ -9,7 +9,7 @@
 }
 
 .site-content .widget-area {
-	float: left;
+	float: right;
 	overflow: hidden;
 	width: $size__site-sidebar;
 }
