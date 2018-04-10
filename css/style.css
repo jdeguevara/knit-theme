@@ -489,7 +489,8 @@ img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
-  /* Adhere to container width. */ }
+  /* Adhere to container width. */
+  margin: 15px auto; }
 
 img.about {
   max-width: 400px;
@@ -579,8 +580,17 @@ textarea {
   width: 100%; }
 
 #mc_embed_signup form {
-  background-color: #f5f5f5;
+  background-color: transparent;
   text-align: left !important; }
+
+#mc_embed_signup {
+  background: transparent;
+  font-family: montserrat !important; }
+
+#mc_embed_signup label {
+  margin-bottom: 0px !important;
+  margin-top: 10px !important;
+  padding-bottom: 0px !important; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -589,11 +599,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #404040; }
+  color: #ffd700; }
   a:visited {
     color: #c7a800; }
   a:hover, a:focus, a:active {
-    color: #ffd700;
+    color: #c7a800;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.35); }
   a:focus {
     outline: thin dotted; }
@@ -786,11 +796,18 @@ a {
   margin: 0 0 1.5em; }
 
 .white {
-  padding: 15px 0; }
+  padding: 50px 0; }
 
 .gray {
-  padding: 15px 0;
+  padding: 50px 0;
   background-color: #f5f5f5; }
+
+.slim-container {
+  max-width: 600px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -834,6 +851,10 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block; }
+
+img.team-photo {
+  max-width: 250px;
+  margin: 20px 0 10px 0; }
 
 /*--------------------------------------------------------------
 ## Captions
@@ -901,7 +922,7 @@ object {
 .site-footer {
   clear: both;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #0066ff;
   padding: 35px 0; }
 
 /*# sourceMappingURL=style.css.map */
