@@ -485,18 +485,6 @@ ul.menu {
   line-height: 2;
   font-weight: 600; }
 
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */
-  margin: 15px auto; }
-
-img.about {
-  max-width: 400px;
-  display: block;
-  margin: 0 auto; }
-
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
@@ -591,6 +579,9 @@ textarea {
   margin-bottom: 0px !important;
   margin-top: 10px !important;
   padding-bottom: 0px !important; }
+
+#mc_embed_signup .button {
+  background-color: #8ec11a !important; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -809,6 +800,14 @@ a {
   margin-right: auto;
   margin-left: auto; }
 
+.about {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  padding: 0px; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -851,6 +850,17 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+  margin: 15px auto; }
+
+img.about {
+  margin: 0;
+  padding: 0; }
 
 img.team-photo {
   max-width: 250px;
@@ -922,7 +932,7 @@ img.team-photo {
 .site-footer {
   clear: both;
   width: 100%;
-  background-color: #0066ff;
+  background-color: #404040;
   padding: 35px 0; }
 
 /*# sourceMappingURL=style.css.map */

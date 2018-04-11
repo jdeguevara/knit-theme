@@ -19,6 +19,17 @@ object {
 	display: inline-block;
 }
 
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	margin: 15px auto;
+}
+
+img.about{
+	margin: 0;
+	padding: 0;
+}
+
 img.team-photo{
 	max-width: 250px;
 	margin:20px 0 10px 0;
