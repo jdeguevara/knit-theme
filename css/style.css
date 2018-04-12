@@ -79,7 +79,7 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.17em 0; }
 
 /* Grouping content
 	 ========================================================================== */
@@ -372,10 +372,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Voltaire', sans-serif; }
 
 h1 {
-  font-size: 36px; }
+  font-size: 45px; }
 
 h2 {
-  font-size: 30px;
+  font-size: 36px;
   text-align: center; }
 
 h3 {
@@ -605,6 +605,12 @@ a {
   a svg:hover {
     color: #c7a800; }
 
+ul#menu-test-menu.menu li a {
+  color: #8ec11a; }
+
+ul#menu-test-menu.menu li a:hover {
+  color: #ffd700; }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -665,6 +671,17 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+header {
+  background: gold;
+  background: linear-gradient(90deg, gold 0%, #8ec11a 66%);
+  height: 70px; }
+
+img.header-logo {
+  float: right;
+  margin: .3em 0;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px grey; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -800,14 +817,14 @@ a {
   margin-right: auto;
   margin-left: auto; }
 
-.about {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.15);
-  background-size: cover;
-  padding: 0px; }
-
+/*.about  {
+	width: 100%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 30px 10px rgba(0,0,0,.15);
+    background-size: cover;
+    padding: 0px;
+}*/
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -859,8 +876,10 @@ img {
   margin: 15px auto; }
 
 img.about {
-  margin: 0;
-  padding: 0; }
+  margin: 0 auto;
+  padding: 0;
+  max-width: 450px;
+  box-shadow: 11px -5px 30px 3px rgba(0, 0, 0, 0.2); }
 
 img.team-photo {
   max-width: 250px;

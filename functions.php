@@ -159,6 +159,8 @@ function knit_theme_scripts() {
 	wp_enqueue_script('knit-theme_bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20170710', true );
 	wp_enqueue_script( 'knit-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'knit-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'popper_js', 'https://unpkg.com/popper.js', array(), null );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

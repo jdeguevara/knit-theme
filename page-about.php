@@ -8,32 +8,32 @@
 
 <!-- Vision -->
 <div class="white">
-<!-- 	<div class="container"> -->
+	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-md-6" style="padding: 0 100px;">
-				<h1 class="text-center"><?php the_field('section_title_1'); ?></h1>
+			<div class="col-xs-12 col-md-6">
+				<h2 class="text-center"><?php the_field('section_title_1'); ?></h2>
 				<p style="font-size: 19px;"><?php the_field('section_text_1'); ?></p>
 			</div>
-			<div class="col-xs-12 col-md-6 about">
+			<div class="col-xs-12 col-md-6 text-center">
 				<img class="about" src="<?php the_field('section_image_1'); ?>" />
 			</div>
 		</div>
-<!-- 	</div> -->
+	</div>
 </div>
 
 <!-- Why Knit -->
 <div class="gray">
-<!-- 	<div class="container"> -->
+	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-md-6 about">
+			<div class="col-xs-12 col-md-6 text-center">
 			<?php if( get_field('section_image_2') ): ?>
 
 				<img class="about" src="<?php the_field('section_image_2'); ?>" />
 
 				<?php endif; ?>
 			</div>
-			<div class="col-xs-12 col-md-6" style="padding: 0 100px;">
-			<h1 class="text-center"><?php the_field('section_title_2'); ?></h1>
+			<div class="col-xs-12 col-md-6">
+			<h2 class="text-center"><?php the_field('section_title_2'); ?></h2>
 				 <ul>
 				<?php 
 		           if( have_rows('why_knit') ):
@@ -49,7 +49,7 @@
       		</ul>
 			</div>
 		</div>
-<!-- 	</div> -->
+	</div>
 </div>
 
 <!-- Timeline -->

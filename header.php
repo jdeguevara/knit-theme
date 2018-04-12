@@ -24,6 +24,37 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header row">
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8 col-lg-8">
+			<h1 style="color: white;">  <?php the_title(); ?></h1>
+		</div>
+		<div class="col-xs-4 col-lg-4">
+<!-- 			<div class="btn-group dropleft">
+			  <a href="#" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<img class="header-logo" src="/wp-content/uploads/2018/04/KNIT-logo-12.jpg" />
+			</a>
+			</div>
+			<div>
+				
+			</div> -->
+
+			<div class="dropleft show" style="float: right;">
+  <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img class="header-logo" src="/wp-content/uploads/2018/04/KNIT-logo-12.jpg" />
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="padding: 15px; background-color: rgba(250, 250, 250, 0.95);">
+		<?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
+  </div>
+</div>
+
+		</div>
+
+
+			
+	</div>
+</div>
 
 	</header><!-- #masthead -->
 
