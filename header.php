@@ -23,6 +23,12 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
+
 	<!-- #masthead -->
+
+	<header id="masthead" class="site-header row">
+
+	</header><!-- #masthead -->
+
 
 	<div id="content" class="site-content">

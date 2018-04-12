@@ -375,7 +375,8 @@ h1 {
   font-size: 36px; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 30px;
+  text-align: center; }
 
 h3 {
   font-size: 26px; }
@@ -428,6 +429,16 @@ mark, ins {
 big {
   font-size: 125%; }
 
+p.home-serv {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 2; }
+
+p.blog-preview {
+  color: white;
+  margin-top: 20px;
+  order: 6; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -442,7 +453,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  overflow-x: hidden; }
 
 hr {
   background-color: #ccc;
@@ -490,13 +502,24 @@ img {
   max-width: 100%;
   /* Adhere to container width. */ }
 
+img.about {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto; }
+
+img.home {
+  display: center; }
+
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
 .jumbotron {
   border-radius: 0;
-  height: 800px; }
+  height: 700px; }
+
+div.home-blog {
+  background-color: #8ec11a; }
 
 table {
   margin: 0 0 1.5em;
@@ -783,6 +806,13 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
+.white {
+  padding: 15px 0; }
+
+.gray {
+  padding: 15px 0;
+  background-color: #f5f5f5; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -877,7 +907,7 @@ object {
 # Layouts
 --------------------------------------------------------------*/
 .content-area {
-  float: right;
+  float: left;
   margin: 0 0 0 -25%;
   width: 100%; }
 
@@ -885,7 +915,7 @@ object {
   margin: 0 0 0 25%; }
 
 .site-content .widget-area {
-  float: left;
+  float: right;
   overflow: hidden;
   width: 25%; }
 
