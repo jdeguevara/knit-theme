@@ -10,6 +10,7 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	overflow-x: hidden;
 }
 
 hr {
@@ -22,8 +23,31 @@ hr {
 @import "lists";
 
 
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	
+}
+
+img.home {
+	display:center;
+}
+
+
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.jumbotron {
+	border-radius: 0;
+	height:700px;
+
+
+}
+
+div.home-blog {
+	background-color:#8ec11a;
+
 }
 
 @import "tables";

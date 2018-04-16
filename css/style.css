@@ -429,6 +429,16 @@ mark, ins {
 big {
   font-size: 125%; }
 
+p.home-serv {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 2; }
+
+p.blog-preview {
+  color: white;
+  margin-top: 20px;
+  order: 6; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -443,7 +453,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  overflow-x: hidden; }
 
 hr {
   background-color: #ccc;
@@ -485,9 +496,25 @@ ul.menu {
   line-height: 2;
   font-weight: 600; }
 
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+img.home {
+  display: center; }
+
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
+
+.jumbotron {
+  border-radius: 0;
+  height: 700px; }
+
+div.home-blog {
+  background-color: #8ec11a; }
 
 table {
   margin: 0 0 1.5em;
@@ -610,6 +637,23 @@ ul#menu-test-menu.menu li a {
 
 ul#menu-test-menu.menu li a:hover {
   color: #ffd700; }
+
+.business {
+  height: 100px;
+  width: 100px;
+  background-color: #8ec11a;
+  border-radius: 100%;
+  margin: 0 auto; }
+
+.youth {
+  height: 100px;
+  width: 100px;
+  background-color: #ffd700;
+  border-radius: 100%;
+  margin: 0 auto; }
+
+.youth svg, i, a {
+  color: #8ec11a; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -811,7 +855,7 @@ img.header-logo {
   background-color: #f5f5f5; }
 
 .slim-container {
-  max-width: 600px;
+  max-width: 800px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;

@@ -12,7 +12,22 @@
  * @package knit-theme
  */
 
-get_header();
+?>
+<div class="container">
+	<div class="row">
+		<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+			
+		<?php
+		if ( have_posts() ) :
+
+			if ( is_home() && ! is_front_page() ) :
+				?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
+				<?php
+			endif;
 ?>
 
 <div class="container">
@@ -46,6 +61,21 @@ get_header();
 				the_posts_navigation();
 
 			else :
+
+
+		endif;
+		?>
+		
+		</main> <!-- #main -->
+</div><!-- #primary -->
+<?php get_sidebar(); ?>
+
+</div>
+</div>
+
+<?php
+
+get_footer();
 
 				get_template_part( 'template-parts/content', 'none' );
 

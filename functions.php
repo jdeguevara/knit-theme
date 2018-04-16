@@ -15,6 +15,14 @@ if ( ! function_exists( 'knit_theme_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
+	function max_title_length( $title ) {
+		$max = 37;
+			if( strlen( $title ) > $max ) {
+			return substr( $title, 0, $max ). " &hellip;";
+			} else {
+			return $title;
+			}
+		}
 	function knit_theme_setup() {
 		/*
 		 * Make theme available for translation.
@@ -41,6 +49,7 @@ if ( ! function_exists( 'knit_theme_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

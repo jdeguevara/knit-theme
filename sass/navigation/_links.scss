@@ -35,3 +35,24 @@ ul#menu-test-menu.menu li a{
 ul#menu-test-menu.menu li a:hover{
 	color: $color__yellow;
 }
+
+.business{
+	height: 100px;
+	width: 100px;
+	background-color: $color__green;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+.youth{
+	height: 100px;
+	width: 100px;
+	background-color: $color__yellow;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+.youth svg, i, a{
+	color: $color__green;
+}
+

@@ -20,14 +20,21 @@
 	<?php wp_head(); ?>
 </head>
 
+
+
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+
+
+	<!-- #masthead -->
 
 	<header id="masthead" class="site-header row">
 <div class="container">
 	<div class="row">
 		<div class="col-xs-8 col-lg-8">
-			<h1 style="color: white;">  <?php the_title(); ?></h1>
+			<h1 style="color: white;">  <?php add_filter( 'the_title', 'max_title_length'); the_title(); ?></h1>
+
+			<?php rewind_posts(); ?>
 		</div>
 		<div class="col-xs-4 col-lg-4">
 <!-- 			<div class="btn-group dropleft">
@@ -57,5 +64,6 @@
 </div>
 
 	</header><!-- #masthead -->
+
 
 	<div id="content" class="site-content">
