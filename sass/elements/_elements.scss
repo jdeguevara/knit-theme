@@ -20,7 +20,7 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-@import "lists";
+
 
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -52,9 +52,10 @@ figure {
 
 }
 
-div.home-blog {
-	background-color:#8ec11a;
+.slider {
+	color:red;
 
 }
 
+@import "lists";
 @import "tables";

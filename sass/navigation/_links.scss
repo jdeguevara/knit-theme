@@ -27,3 +27,11 @@ a {
 		color: #c7a800;
 	}
 }
+
+ul#menu-test-menu.menu li a{
+	color: $color__green;
+}
+
+ul#menu-test-menu.menu li a:hover{
+	color: $color__yellow;
+}

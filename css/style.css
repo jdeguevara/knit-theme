@@ -79,7 +79,7 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.17em 0; }
 
 /* Grouping content
 	 ========================================================================== */
@@ -372,10 +372,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Voltaire', sans-serif; }
 
 h1 {
-  font-size: 36px; }
+  font-size: 45px; }
 
 h2 {
-  font-size: 30px;
+  font-size: 36px;
   text-align: center; }
 
 h3 {
@@ -436,8 +436,7 @@ p.home-serv {
 
 p.blog-preview {
   color: white;
-  margin-top: 20px;
-  order: 6; }
+  margin-top: 20px; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -461,6 +460,31 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+img.about {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto; }
+
+img.home {
+  display: center; }
+
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */ }
+
+.jumbotron {
+  border-radius: 0;
+  height: 700px; }
+
+.slider {
+  color: red; }
 
 ul, ol {
   margin: 0 0 1.5em 0;
@@ -495,31 +519,6 @@ ul.fa-ul {
 ul.menu {
   line-height: 2;
   font-weight: 600; }
-
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
-
-img.about {
-  max-width: 400px;
-  display: block;
-  margin: 0 auto; }
-
-img.home {
-  display: center; }
-
-figure {
-  margin: 1em 0;
-  /* Extra wide images within figure tags don't overflow the content area. */ }
-
-.jumbotron {
-  border-radius: 0;
-  height: 700px; }
-
-div.home-blog {
-  background-color: #8ec11a; }
 
 table {
   margin: 0 0 1.5em;
@@ -600,8 +599,20 @@ textarea {
   width: 100%; }
 
 #mc_embed_signup form {
-  background-color: #f5f5f5;
+  background-color: transparent;
   text-align: left !important; }
+
+#mc_embed_signup {
+  background: transparent;
+  font-family: montserrat !important; }
+
+#mc_embed_signup label {
+  margin-bottom: 0px !important;
+  margin-top: 10px !important;
+  padding-bottom: 0px !important; }
+
+#mc_embed_signup .button {
+  background-color: #8ec11a !important; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -610,11 +621,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #404040; }
+  color: #ffd700; }
   a:visited {
     color: #c7a800; }
   a:hover, a:focus, a:active {
-    color: #ffd700;
+    color: #c7a800;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.35); }
   a:focus {
     outline: thin dotted; }
@@ -624,6 +635,12 @@ a {
     color: #ffd700; }
   a svg:hover {
     color: #c7a800; }
+
+ul#menu-test-menu.menu li a {
+  color: #8ec11a; }
+
+ul#menu-test-menu.menu li a:hover {
+  color: #ffd700; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -685,6 +702,32 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.menu-home {
+  height: 70px;
+  background: gold;
+  background: linear-gradient(90deg, gold 0%, #8ec11a 66%);
+  margin-top: -35px; }
+  .menu-home ul {
+    margin-left: 830px;
+    margin-top: -15px; }
+  .menu-home li {
+    float: left;
+    padding-right: 25px;
+    margin-right: 15px; }
+  .menu-home li a {
+    color: white; }
+
+header {
+  background: gold;
+  background: linear-gradient(90deg, gold 0%, #8ec11a 66%);
+  height: 70px; }
+
+img.header-logo {
+  float: right;
+  margin: .3em 0;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px grey; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -807,12 +850,27 @@ a {
   margin: 0 0 1.5em; }
 
 .white {
-  padding: 15px 0; }
+  padding: 50px 0; }
 
 .gray {
-  padding: 15px 0;
+  padding: 50px 0;
   background-color: #f5f5f5; }
 
+.slim-container {
+  max-width: 600px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+/*.about  {
+	width: 100%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 30px 10px rgba(0,0,0,.15);
+    background-size: cover;
+    padding: 0px;
+}*/
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -855,6 +913,30 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+  margin: 15px auto; }
+
+img.about {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 450px;
+  box-shadow: 11px -5px 30px 3px rgba(0, 0, 0, 0.2); }
+
+img.team-photo {
+  max-width: 250px;
+  margin: 20px 0 10px 0; }
+
+img.doodle {
+  display: center;
+  justify-content: space-between;
+  max-width: 80%;
+  height: auto;
+  margin-left: 50px; }
 
 /*--------------------------------------------------------------
 ## Captions
@@ -922,7 +1004,7 @@ object {
 .site-footer {
   clear: both;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #404040;
   padding: 35px 0; }
 
 /*# sourceMappingURL=style.css.map */

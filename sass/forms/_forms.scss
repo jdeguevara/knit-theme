@@ -3,6 +3,23 @@
 @import "fields";
 
 #mc_embed_signup form{
-    background-color: #f5f5f5;
+    background-color: transparent;
     text-align: left!important;
 }
+
+#mc_embed_signup {
+    background: transparent;
+    font-family: $font__main!important;
+    }
+
+ #mc_embed_signup label{
+    margin-bottom: 0px!important;
+    margin-top: 10px!important;
+    padding-bottom: 0px!important;
+ }
+
+ #mc_embed_signup .button{
+ 	background-color: $color__green!important;
+ } 
+
+ 
