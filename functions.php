@@ -16,7 +16,7 @@ if ( ! function_exists( 'knit_theme_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function max_title_length( $title ) {
-		$max = 37;
+		$max = 38;
 			if( strlen( $title ) > $max ) {
 			return substr( $title, 0, $max ). " &hellip;";
 			} else {

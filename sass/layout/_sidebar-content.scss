@@ -20,3 +20,46 @@
 	background-color: $color__dark-gray;
 	padding: 35px 0;
 }
+
+.sidebar-content {
+    margin: 1.5em auto;
+    border-left: #8ec11a dotted 2px;
+    padding: 0 10px;
+}
+
+aside#secondary {
+	padding-left: 30px;
+}
+
+section#categories-2{
+	border: 5px #990099 dotted;
+    border-radius: 4px;
+    padding: 21px;
+    text-align: center;
+}
+
+section#categories-2 h2{
+	color: #990099;
+}
+
+section#recent-posts-2{
+	border: 5px #ff3399 dotted;
+    border-radius: 4px;
+    padding: 21px;
+    text-align: center;
+}
+
+section#recent-posts-2 h2{
+	color: #ff3399;
+}
+
+section#text-3{
+	border: 5px #ff6600 dotted;
+    border-radius: 4px;
+    padding: 21px;
+    text-align: center;
+}
+
+section#text-3 h2{
+	color: #ff6600;
+}

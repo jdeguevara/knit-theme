@@ -31,10 +31,12 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
-
 	<footer class="entry-footer">
 		<?php knit_theme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-	</article><!-- #post-<?php the_ID(); ?> -->
+
+</div><!-- .entry-content -->
+
+	
+	
 

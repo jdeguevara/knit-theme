@@ -62,24 +62,24 @@ if ( ! function_exists( 'knit_theme_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'knit-theme' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'knit-theme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<p class="cat-links">' . esc_html__( 'Posted in %1$s', 'knit-theme' ) . '</p>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'knit-theme' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'knit-theme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<p class="tags-links">' . esc_html__( 'Tagged %1$s', 'knit-theme' ) . '</p>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<p class="comments-link">';
 			comments_popup_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'knit-theme' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</p>', 'knit-theme' ),
 						array(
 							'span' => array(
 								'class' => array(),
