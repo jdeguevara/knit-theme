@@ -12,9 +12,7 @@
  * @package knit-theme
  */
 
-get_header();
 ?>
-<<<<<<< HEAD
 <div class="container">
 	<div class="row">
 		<div id="primary" class="content-area">
@@ -30,7 +28,7 @@ get_header();
 				</header>
 				<?php
 			endif;
-=======
+?>
 
 <div class="container">
 	<div class="row">
@@ -38,7 +36,6 @@ get_header();
 			<main id="main" class="site-main">
 			<?php
 			if ( have_posts() ) :
->>>>>>> fa64f766f4a4b5d4e6ca6d223d5127f848cbc94b
 
 				if ( is_home() && ! is_front_page() ) :
 					?>
@@ -80,7 +77,6 @@ get_header();
 
 get_footer();
 
-=======
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif;
@@ -91,4 +87,3 @@ get_footer();
 	</div>
 </div>
 <?php get_footer(); 
->>>>>>> fa64f766f4a4b5d4e6ca6d223d5127f848cbc94b

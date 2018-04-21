@@ -44,7 +44,8 @@
 								<img class="home" style="margin-left:410px; margin-top:100px;" src="<?php the_field('logo'); ?>" />
 							<?php endif; ?>						
 					</div>
-					<div class="menu-home" class="col-lg-6" style="padding: 15px; background-color: rgba(250, 250, 250, 0.95);">
+
+					<div class="menu-home" style="padding: 15px; background-color: rgba(250, 250, 250, 0.95);">
 						<div >
 						<?php wp_nav_menu( array( 'menu' => 'home-menu' ) ); ?>
   						</div>
@@ -92,18 +93,21 @@
 		                 $serv_txt = get_sub_field('serv_txt');
 		                 ?>
 
-		                 <div class="col-xs-12 col-lg-3" class="body" style=" margin-top: 30px;">
+		                 <div class="col-xs-12 col-lg-3" class="body" style=" margin-top: 50px;">
 		                 	
 		                 	<h2 class="home-serv"><?php if( $name_txt ): echo $name_txt; endif; ?></h2>
 		                 	
 							<img src="<?php if( $serv_img ): echo $serv_img; endif; ?>" />
-
+							
 							<p class="home-serv"><?php if( $serv_txt ): echo $serv_txt; endif; ?></p>
+							
 						</div>
 		            <?php endwhile;
 		          endif; ?>
-		          <div  class="button">
-							<a href="<?php the_field('serv_button'); ?>" target="_blank">Explore More</a>
+
+
+		          <div class="col-lg-12">
+							<a  class="services-button" href="<?php the_field('serv_button');?>" target="_blank" style="color:white;">Explore More</a>
 					</div>
 
 				</div>
@@ -121,17 +125,58 @@
       				<h2 style="margin-top:40px; text-align: left-center; "><?php the_field('resources_left'); ?></h2>	
 					
 
+					
+
     			</div>	
 				<!--Blog Section-->
 
-    			<div class="col-xs-12 col-lg-6" style="background-color: #8ec11a;" > 
+    			<div class="col-xs-12 col-lg-6" style="background-color: #8ec11a; height:600px;" > 
 
       				<h2 style="margin-top:40px; text-align: center-right; color:white; "><?php the_field('blog_right'); ?></h2>	
 
-      				<img class="home" style=" margin-top:20px;" src="<?php the_field('blog_img'); ?>" />
-	
-      				<p  class="blog-preview" style="order:3;" ><?php the_field('blog_prev'); ?></p>
+      				<?php
+
+					$args = array(
+
 					
+					"posts_per_page" => 1
+
+					);
+
+					$wp_query = new WP_Query($args);
+
+					if($wp_query->have_posts()):
+						while($wp_query->have_posts()):
+							$wp_query->the_post();
+							?>
+							<!--Image Blog-->
+							<div style="background-image: url('<?php echo the_post_thumbnail_url()?>'); min-height: 250px; max-height:300px; background-repeat: no-repeat; background-size: cover; margin: 0px 300px 0 10px" >
+							<a href="<?php echo get_permalink() ?>">
+							<!--Title Blog-->
+						<?php 
+							echo '<h1 class="blog_preview" ">' . get_the_title() . '</h1>'; 
+							?>
+							</a>
+						<div class="blog_preview">
+							<?php  
+								echo '<p class="blog_preview" ">' . get_the_content() . '</p>'; 
+
+							?>
+						</div>
+							
+							</div>
+
+						<?php
+
+						endwhile;
+
+						wp_reset_postdata();
+						wp_reset_query();
+
+					endif;
+
+					?>
+
 
     			</div>	
 				<div col-lg-3>

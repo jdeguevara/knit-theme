@@ -390,6 +390,9 @@ h5 {
 h6 {
   font-size: 14px; }
 
+h2.home-serv {
+  color: #FFD700; }
+
 p {
   margin-bottom: .5em; }
 
@@ -430,13 +433,37 @@ big {
   font-size: 125%; }
 
 p.home-serv {
-  margin-top: 30px;
+  margin-top: 0px;
   text-align: center;
-  line-height: 2; }
+  line-height: 2;
+  border-style: dotted;
+  border-radius: 1em;
+  border-color: #FFD700; }
 
 p.blog-preview {
   color: white;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin: 20px;
+  text-align: center;
+  min-height: 250px;
+  max-height: 100px;
+  padding-top: 20%;
+  float: right; }
+
+p.service-includes {
+  font-size: 19px;
+  border-bottom-style: solid;
+  padding-bottom: 0px;
+  text-align: left;
+  display: block;
+  display: inline-block; }
+
+p.service-how {
+  font-size: 19px;
+  text-align: center;
+  float: left; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -642,6 +669,43 @@ ul#menu-test-menu.menu li a {
 ul#menu-test-menu.menu li a:hover {
   color: #ffd700; }
 
+.business {
+  height: 100px;
+  width: 100px;
+  background-color: #8ec11a;
+  border-radius: 100%;
+  margin: 0 auto; }
+
+.youth {
+  height: 100px;
+  width: 100px;
+  background-color: #ffd700;
+  border-radius: 100%;
+  margin: 0 auto; }
+
+.youth svg, i, a {
+  color: #8ec11a; }
+
+a.services-button {
+  display: block;
+  display: inline-block;
+  display: center;
+  margin-left: 470px;
+  margin-bottom: 30px;
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 5px;
+  background: #8ec11a;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 2;
+  padding: .70em 2em .4em; }
+  a.services-button:hover {
+    border-color: #ccc #bbb #aaa; }
+  a.services-button:active, a.services-button:focus {
+    border-color: #aaa #bbb #bbb; }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -709,12 +773,13 @@ ul#menu-test-menu.menu li a:hover {
   background: linear-gradient(90deg, gold 0%, #8ec11a 66%);
   margin-top: -35px; }
   .menu-home ul {
-    margin-left: 830px;
+    float: right;
     margin-top: -15px; }
   .menu-home li {
     float: left;
     padding-right: 25px;
-    margin-right: 15px; }
+    margin-right: 15px;
+    margin-top: 20px; }
   .menu-home li a {
     color: white; }
 
@@ -857,7 +922,7 @@ img.header-logo {
   background-color: #f5f5f5; }
 
 .slim-container {
-  max-width: 600px;
+  max-width: 800px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;

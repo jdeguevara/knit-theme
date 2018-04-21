@@ -35,3 +35,49 @@ ul#menu-test-menu.menu li a{
 ul#menu-test-menu.menu li a:hover{
 	color: $color__yellow;
 }
+
+.business{
+	height: 100px;
+	width: 100px;
+	background-color: $color__green;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+.youth{
+	height: 100px;
+	width: 100px;
+	background-color: $color__yellow;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+.youth svg, i, a{
+	color: $color__green;
+}
+
+a.services-button {
+	display: block;
+	display: inline-block;
+	display:center;
+	margin-left:470px;
+	margin-bottom: 30px;
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 5px;
+	background: #8ec11a/*$color__background-button**/;
+	color: rgba(0, 0, 0, .8);
+	@include font-size(1);
+	line-height: 2;
+	padding: .70em 2em .4em;
+	
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+
+}
