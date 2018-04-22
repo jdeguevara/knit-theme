@@ -36,20 +36,13 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-8 col-lg-8">
-			<h1 style="color: white;">  <?php add_filter( 'the_title', 'max_title_length'); the_title(); ?></h1>
+			<a href="/blog"><h1 style="color: white;">  Blog</h1></a>
 
 			<?php rewind_posts(); ?>
 		</div>
 		
 		<div class="col-xs-4 col-lg-4">
-<!-- 			<div class="btn-group dropleft">
-			  <a href="#" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<img class="header-logo" src="/wp-content/uploads/2018/04/KNIT-logo-12.jpg" />
-			</a>
-			</div>
-			<div>
-				
-			</div> -->
+
 
 			<div class="dropleft show" style="float: right;">
   <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

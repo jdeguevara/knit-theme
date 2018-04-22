@@ -42,11 +42,64 @@
     margin-left: auto;
 }
 
-/*.about  {
-	width: 100%;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 5px 30px 10px rgba(0,0,0,.15);
-    background-size: cover;
-    padding: 0px;
-}*/
+
+/********** ABOUT PAGE ************/
+.team-photo {
+	margin: 0 auto;
+	max-width: 250px;
+	min-height: 200px;
+	background-size: contain;
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	box-shadow: 6px 8px 6px -6px #404040;
+	background-color: rgba(240,240,240,.9);
+}
+
+.team-title{
+	padding-top: 5px;
+}
+
+/* entire container, keeps perspective */
+.team-card-container {
+	perspective: 1000px;
+	margin: 20px auto;
+}
+	/* flip the pane when hovered */
+	.team-card-container:hover .team-card, .team-card-container.hover .team-card {
+		transform: rotateY(180deg);
+	}
+
+.team-card-container, .team-photo, .team-card-back {
+	width: 220px;
+	height: 300px;
+}
+
+/* flip speed goes here */
+.team-card {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.team-photo, .team-card-back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.team-photo {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.team-card-back {
+	transform: rotateY(180deg);
+	background-color: rgba(240,240,240,.9);
+	box-shadow: 6px 8px 6px -6px #404040;
+}

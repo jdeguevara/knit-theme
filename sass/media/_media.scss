@@ -37,6 +37,23 @@ img.team-photo{
 	margin:20px 0 10px 0;
 }
 
+img.doodle {
+	
+	display: center;  
+  	justify-content: space-between;
+  	max-width: 80%;
+  	height:auto ;
+  	margin-left:50px;
+}
+
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+	box-shadow: 3px -1px 25px 3px rgba(0, 0, 0, 0.35)
+}
+
+img.no-margin{
+	margin:0;
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
