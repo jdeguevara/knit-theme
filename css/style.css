@@ -825,16 +825,36 @@ a.services-button {
   .menu-home li a {
     color: white; }
 
+.navbar {
+  background: #404040;
+  padding: 0;
+  max-height: 55px; }
+
+ul#menu-test-menu {
+  margin-bottom: 0; }
+
+.menu-main ul {
+  float: right; }
+
+.menu-main li {
+  float: left;
+  padding: 0 10px; }
+
+li a {
+  font-weight: 400; }
+
 header {
   background: gold;
   background: linear-gradient(90deg, gold 0%, #8ec11a 66%);
-  height: 70px; }
+  height: 85px; }
 
 img.header-logo {
-  float: right;
-  margin: .3em 0;
-  border-radius: 3px;
-  box-shadow: 1px 1px 3px grey; }
+  float: left;
+  margin: 0; }
+
+.header-title {
+  color: white;
+  padding: 9px 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
