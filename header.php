@@ -53,7 +53,7 @@
 
 			<div class="dropleft show" style="float: right;">
   <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img class="header-logo" src="/wp-content/uploads/2018/04/KNIT-logo-1-3-e1473634703799.png" />
+    <img class="header-logo" src="/wp-content/uploads/2018/04/00" />
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="padding: 15px; background-color: rgba(250, 250, 250, 0.95);">
