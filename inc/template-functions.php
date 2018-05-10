@@ -19,6 +19,7 @@ function knit_theme_body_classes( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class', 'knit_theme_body_classes' );
 
 /**

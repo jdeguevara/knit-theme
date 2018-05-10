@@ -11,14 +11,15 @@
 header {
 	background: rgb(255,215,0);
 	background: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(142,193,26,1) 66%);
-	height: 70px;
+	height: 85px;
 }
 
 img.header-logo {
-	float:right; 
-	margin: .3em 0;
-	border-radius: 3px;
-	box-shadow: 1px 1px 3px grey;
+	float:left; 
+	margin: 0;
 }
 
-
+.header-title{
+	color: white;
+	padding: 9px 0;
+}

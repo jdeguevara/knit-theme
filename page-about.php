@@ -86,21 +86,22 @@
 		                 $Ltitle = get_sub_field('l_team_member_title');
 		                 $Lbio = get_sub_field('l_team_member_bio'); ?>
 
-             <div class="col-xs-12 col-md-6">
-             	<img class="team-photo" src="<?php if( $Lphoto ): echo $Lphoto; endif; ?>" />
-             	<a href="#<?php if( $LlinkName ): echo $LlinkName; endif; ?>" data-toggle="modal" data-target="#<?php if( $LlinkName ): echo $LlinkName; endif; ?>"><h4 style="margin-bottom: 0px;"><?php if( $Lname ): echo $Lname; endif; ?></h4></a>
-             	<p><?php if( $Ltitle ): echo $Ltitle; endif; ?></p>
-				<!-- Modal -->
-				<div class="modal" id="<?php if( $LlinkName ): echo $LlinkName; endif; ?>" data-toggle="modal"  tabindex="-1" role="dialog" aria-labelledby="<?php if( $LlinkName ): echo $LlinkName; endif; ?>" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-body">
+             <div class="col-xs-12 col-md-6" >
+             	<div class="team-card-container">
+	             	<div class="team-card">
+		             	<div class="team-photo" >
+		             	<img class="no-margin" src="<?php if( $Lphoto ): echo $Lphoto; endif; ?>" />
+
+			             	<div class="team-title">
+				             	<h4 style="margin-bottom: 0px; padding-top: 10%"><?php if( $Lname ): echo $Lname; endif; ?></h4>
+				             	<p><?php if( $Ltitle ): echo $Ltitle; endif; ?></p>
+			             	</div>
+						</div>
+						<div class="team-card-back">
 							<p><?php if( $Lbio ): echo $Lbio; endif; ?></p>
-							</div>
-					    </div>
+						</div>
 					</div>
 				</div>
-
 			</div>
 		<?php endwhile;
 		endif; ?>
@@ -120,26 +121,29 @@
 		                 $bio = get_sub_field('team_member_bio'); ?>
 
              <div class="col-xs-12 col-md-4">
-             	<img class="team-photo" src="<?php if( $photo ): echo $photo; endif; ?>" />
-             	<a href="#<?php if( $linkName ): echo $linkName; endif; ?>" data-toggle="modal" data-target="#<?php if( $linkName ): echo $linkName; endif; ?>"><h4 style="margin-bottom: 0px;"><?php if( $name ): echo $name; endif; ?></h4></a>
-             	<p><?php if( $title ): echo $title; endif; ?></p>
-				<!-- Modal -->
-				<div class="modal" id="<?php if( $linkName ): echo $linkName; endif; ?>" data-toggle="modal"  tabindex="-1" role="dialog" aria-labelledby="<?php if( $linkName ): echo $linkName; endif; ?>" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-body">
+				<div class="team-card-container">
+	             	<div class="team-card">     	
+             			<div class="team-photo">
+             			<img class="no-margin" src="<?php if( $photo ): echo $photo; endif; ?>" />
+             				<div class="team-title">
+				             	<h4 style="margin-bottom: 0px; padding-top: 10%"><?php if( $name ): echo $name; endif; ?></h4>
+				             	<p><?php if( $title ): echo $title; endif; ?></p>
+				             </div>
+						</div>
+						<div class="team-card-back">
 							<p><?php if( $bio ): echo $bio; endif; ?></p>
-							</div>
-					    </div>
+						</div>
 					</div>
 				</div>
-
 			</div>
+
 		<?php endwhile;
 		endif; ?>
+
 		</div>
 	</div>
 </div>
+
 <!--Advisors-->	
 <div class="white">
 	<div class="container text-center">
@@ -159,18 +163,20 @@
 		                 $advLinkName = get_sub_field('advisor_first_name');
 		                 $advTitle = get_sub_field('adv_title');
 		                 $advBio = get_sub_field('adv_bio'); ?>
+			
 			<div class="col-xs-12 col-md-6">
-             	<img class="team-photo" src="<?php if( $advPhoto ): echo $advPhoto; endif; ?>" />
-             	<a href="#<?php if( $advLinkName ): echo $advLinkName; endif; ?>" data-toggle="modal" data-target="#<?php if( $advLinkName ): echo $advLinkName; endif; ?>"><h4 style="margin-bottom: 0px;"><?php if( $advName ): echo $advName; endif; ?></h4></a>
-             	<p><?php if( $advTitle ): echo $advTitle; endif; ?></p>
-<!-- Modal -->
-				<div class="modal" id="<?php if( $advLinkName ): echo $advLinkName; endif; ?>" data-toggle="modal"  tabindex="-1" role="dialog" aria-labelledby="<?php if( $advLinkName ): echo $advLinkName; endif; ?>" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-body">
+             	<div class="team-card-container">
+	             	<div class="team-card">     	
+             			<div class="team-photo">
+             				<img class="no-margin" src="<?php if( $advPhoto ): echo $advPhoto; endif; ?>"/>
+             				<div class="team-title">
+				             	<h4 style="margin-bottom: 0px;"><?php if( $advName ): echo $advName; endif; ?></h4>
+				             	<p><?php if( $advTitle ): echo $advTitle; endif; ?></p>
+				             </div>
+						</div>
+						<div class="team-card-back">
 							<p><?php if( $advBio ): echo $advBio; endif; ?></p>
-							</div>
-					    </div>
+						</div>
 					</div>
 				</div>
 

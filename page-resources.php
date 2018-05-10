@@ -5,7 +5,6 @@
 
 get_header(); ?>
 
-
 <!-- Business -->
 <div class="white">
 	<div class="container">
@@ -236,4 +235,3 @@ get_header(); ?>
 
 
 <?php get_footer(); 
-

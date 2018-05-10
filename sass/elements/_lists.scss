@@ -44,12 +44,50 @@ ul.menu {
 	font-weight: 600;
 }
 
+
 li.services-includes {
 
 	text-align: left;
-	border-bottom: 1px solid #000;
-	border-radius:100px;
-
 	padding: 3px;
 
 }
+
+
+li.custom-underline {
+
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+
+
+li.custom-underline,
+li.custom-underline:hover,
+li.custom-underline:focus,
+li.custom-underline:active {
+  
+  text-decoration: none;
+}
+
+li.custom-underline::after {
+  content: "";
+  position: absolute;
+}
+
+
+
+
+li.cat-item {
+    padding: 10px 0;
+    line-height: 1;
+}
+
+section#recent-posts-2 ul li{
+	padding: 10px 0;
+    line-height: 1;
+}
+
+

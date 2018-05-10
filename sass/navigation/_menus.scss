@@ -115,7 +115,11 @@
 
 
 	ul {
+
+		float: right;
+
 		float:right;
+
 		margin-top: -15px;
 		
 	}
@@ -131,9 +135,28 @@
 			
 			color:white;
 		}
-	
-	
+}
+.navbar {
+	background: #404040;
+	padding: 0;
+	max-height: 55px;
+}
 
+ul#menu-test-menu{
+	margin-bottom: 0;
+}
+
+.menu-main ul{
+	float: right;
+}
+
+.menu-main li {
+	float: left;
+	padding: 0 10px;
+}
+
+li a{
+	font-weight: 400;
 }
 
 .menu-header{

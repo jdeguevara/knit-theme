@@ -1,9 +1,9 @@
 a {
 	color: $color__link;
 
-	&:visited {
+/*	&:visited {
 		color: $color__link-visited;
-	}
+	}*/
 	&:hover,
 	&:focus,
 	&:active {
@@ -52,8 +52,43 @@ ul#menu-test-menu.menu li a:hover{
 	margin: 0 auto;
 }
 
-.youth svg, i, a{
+.youth svg, i{
 	color: $color__green;
+}
+
+p.cat-links{
+	font-size: 12px;
+}
+
+p.tags-links{
+	font-size: 12px;
+}
+
+time.entry-date.published{
+	color: $color__blue;
+}
+
+a.url.fn.n{
+	color: $color__blue;
+}
+
+.blog-link{
+	background-color: $color__green;
+	color: $color__yellow;
+	padding: 15px;
+	border: 1px $color__green solid;
+	border-radius: 7px;
+	margin: 0 auto;
+	text-align: center;
+	width: 60%;
+}
+
+.blog-link a{
+	font-size: 20px;
+}
+
+.blog-link:hover{
+	background-color: $color__green-yellow;
 }
 
 a.services-button {

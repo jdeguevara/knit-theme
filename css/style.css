@@ -394,6 +394,10 @@ h6 {
 h2.home-serv {
   color: #FFD700; }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(https://use.fontawesome.com/releases/v5.0.10/css/all.css);
+  font-weight: normal; }
 p {
   margin-bottom: .5em; }
 
@@ -543,9 +547,32 @@ ul.menu {
 
 li.services-includes {
   text-align: left;
-  border-bottom: 1px solid #000;
-  border-radius: 100px;
   padding: 3px; }
+
+li.custom-underline {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left; }
+
+li.custom-underline,
+li.custom-underline:hover,
+li.custom-underline:focus,
+li.custom-underline:active {
+  text-decoration: none; }
+
+li.custom-underline::after {
+  content: "";
+  position: absolute; }
+
+li.cat-item {
+  padding: 10px 0;
+  line-height: 1; }
+
+section#recent-posts-2 ul li {
+  padding: 10px 0;
+  line-height: 1; }
 
 table {
   margin: 0 0 1.5em;
@@ -648,9 +675,10 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #ffd700; }
-  a:visited {
-    color: #c7a800; }
+  color: #ffd700;
+  /*	&:visited {
+  		color: $color__link-visited;
+  	}*/ }
   a:hover, a:focus, a:active {
     color: #c7a800;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.35); }
@@ -683,8 +711,36 @@ ul#menu-test-menu.menu li a:hover {
   border-radius: 100%;
   margin: 0 auto; }
 
-.youth svg, i, a {
+.youth svg, i {
   color: #8ec11a; }
+
+p.cat-links {
+  font-size: 12px; }
+
+p.tags-links {
+  font-size: 12px; }
+
+time.entry-date.published {
+  color: #0066ff; }
+
+a.url.fn.n {
+  color: #0066ff; }
+
+.blog-link {
+  background-color: #8ec11a;
+  color: #ffd700;
+  padding: 15px;
+  border: 1px #8ec11a solid;
+  border-radius: 7px;
+  margin: 0 auto;
+  text-align: center;
+  width: 60%; }
+
+.blog-link a {
+  font-size: 20px; }
+
+.blog-link:hover {
+  background-color: #c7a800; }
 
 a.services-button {
   display: block;
@@ -810,6 +866,7 @@ a.serv-card {
   margin-top: -35px; }
   .menu-home ul {
     float: right;
+    float: right;
     margin-top: -15px; }
   .menu-home li {
     float: left;
@@ -818,6 +875,24 @@ a.serv-card {
     margin-top: 20px; }
   .menu-home li a {
     color: white; }
+
+.navbar {
+  background: #404040;
+  padding: 0;
+  max-height: 55px; }
+
+ul#menu-test-menu {
+  margin-bottom: 0; }
+
+.menu-main ul {
+  float: right; }
+
+.menu-main li {
+  float: left;
+  padding: 0 10px; }
+
+li a {
+  font-weight: 400; }
 
 .menu-header {
   height: 70px;
@@ -837,13 +912,15 @@ a.serv-card {
 header {
   background: gold;
   background: linear-gradient(90deg, gold 0%, #8ec11a 66%);
-  height: 70px; }
+  height: 85px; }
 
 img.header-logo {
-  float: right;
-  margin: .3em 0;
-  border-radius: 3px;
-  box-shadow: 1px 1px 3px grey; }
+  float: left;
+  margin: 0; }
+
+.header-title {
+  color: white;
+  padding: 9px 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -979,14 +1056,59 @@ img.header-logo {
   margin-right: auto;
   margin-left: auto; }
 
-/*.about  {
-	width: 100%;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 5px 30px 10px rgba(0,0,0,.15);
-    background-size: cover;
-    padding: 0px;
-}*/
+/********** ABOUT PAGE ************/
+.team-photo {
+  margin: 0 auto;
+  max-width: 250px;
+  min-height: 200px;
+  background-size: contain;
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  box-shadow: 6px 8px 6px -6px #404040;
+  background-color: rgba(240, 240, 240, 0.9); }
+
+.team-title {
+  padding-top: 5px; }
+
+/* entire container, keeps perspective */
+.team-card-container {
+  perspective: 1000px;
+  margin: 20px auto; }
+
+/* flip the pane when hovered */
+.team-card-container:hover .team-card, .team-card-container.hover .team-card {
+  transform: rotateY(180deg); }
+
+.team-card-container, .team-photo, .team-card-back {
+  width: 220px;
+  height: 300px; }
+
+/* flip speed goes here */
+.team-card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+/* hide back of pane during swap */
+.team-photo, .team-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* front pane, placed above back */
+.team-photo {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg); }
+
+/* back, initially hidden pane */
+.team-card-back {
+  transform: rotateY(180deg);
+  background-color: rgba(240, 240, 240, 0.9);
+  box-shadow: 6px 8px 6px -6px #404040; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1054,6 +1176,12 @@ img.doodle {
   height: auto;
   margin-left: 50px; }
 
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+  box-shadow: 3px -1px 25px 3px rgba(0, 0, 0, 0.35); }
+
+img.no-margin {
+  margin: 0; }
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -1106,21 +1234,56 @@ img.doodle {
 --------------------------------------------------------------*/
 .content-area {
   float: left;
-  margin: 0 0 0 -25%;
+  margin: 0 0 0 -100%;
   width: 100%; }
 
 .site-main {
-  margin: 0 0 0 25%; }
+  margin: 0 0 0 100%; }
 
 .site-content .widget-area {
   float: right;
   overflow: hidden;
-  width: 25%; }
+  width: 100%; }
 
 .site-footer {
   clear: both;
   width: 100%;
   background-color: #404040;
   padding: 35px 0; }
+
+.sidebar-content {
+  margin: 1.5em auto;
+  border-left: #8ec11a dotted 2px;
+  padding: 0 10px; }
+
+aside#secondary {
+  padding-left: 30px; }
+
+section#categories-2 {
+  border: 5px #990099 dotted;
+  border-radius: 4px;
+  padding: 21px;
+  text-align: center; }
+
+section#categories-2 h2 {
+  color: #990099; }
+
+section#recent-posts-2 {
+  border: 5px #ff3399 dotted;
+  border-radius: 4px;
+  padding: 21px;
+  text-align: center; }
+
+section#recent-posts-2 h2 {
+  color: #ff3399; }
+
+section#text-3 {
+  border: 5px #ff6600 dotted;
+  border-radius: 4px;
+  padding: 21px;
+  text-align: center; }
+
+section#text-3 h2 {
+  color: #ff6600; }
 
 /*# sourceMappingURL=style.css.map */

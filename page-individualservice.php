@@ -48,7 +48,7 @@
 
 		                 // vars
 		                 $includes = get_sub_field('includes_list'); ?>
-		                 <li class="services-includes" style="left center no-repeat; padding-left: 35px; margin: 20px 0; font-size: 19px;"><?php if( $includes ): echo $includes; endif; ?></li>
+		                 <li class="custom-underline" style="left center no-repeat; padding-left: 35px; margin: 20px 0; font-size: 19px;"><?php if( $includes ): echo $includes; endif; ?></li>
 		            <?php endwhile;
 		          endif; ?>
       			</ul>

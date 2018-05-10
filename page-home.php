@@ -151,12 +151,20 @@
 							<a href="<?php echo get_permalink() ?>">
 							<!--Title Blog-->
 						<?php 
+
 							echo '<h1 class="blog-preview" ">' . get_the_title() . '</h1>'; 
+
+							echo '<h1 class="blog_preview" >' . get_the_title() . '</h1>'; 
+
 							?>
 							</a>
 						<div class="blog-preview">
 							<?php  
+
 								echo '<p class="blog-preview" ">' . get_the_content() . '</p>'; 
+
+								echo '<p class="blog_preview" >' . get_the_excerpt() . '</p>'; 
+
 
 							?>
 						</div>
