@@ -16,24 +16,33 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-	
-	
 	<?php wp_head(); ?>
 </head>
 
 
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
 
+<script type="text/javascript" src="code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+
+<div id="page" class="site">
+	
 
 	<!-- #masthead -->
 
 	<header id="masthead" class="site-header row">
+			
+	
 <div class="container">
+
 	<div class="row">
 		<div class="col-xs-8 col-lg-8">
 			<h1 style="color: white;">  <?php add_filter( 'the_title', 'max_title_length'); the_title(); ?></h1>
@@ -68,7 +77,9 @@
 	</div>
 </div>
 
+
 	</header><!-- #masthead -->
+
 
 
 	<div id="content" class="site-content">

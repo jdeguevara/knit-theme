@@ -35,13 +35,11 @@
 	$image= get_field('banner_image');
 	
 ?>
-			
-				
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="jumbotron" style=" background-repeat: no-repeat; background-size: 100%;  background-image: url(<?php if( $image ): echo $image; endif; ?>);">
 							<?php if( get_field('logo') ): ?>
-								<img class="home" style="margin-left:410px; margin-top:100px;" src="<?php the_field('logo'); ?>" />
+								<img class="home" style="margin-left:33%; margin-top:100px;" src="<?php the_field('logo'); ?>" />
 							<?php endif; ?>						
 					</div>
 
@@ -51,12 +49,7 @@
   						</div>
 					</div>			
   				</div>
-					</div>
-				</div>
 			</div>
-
-
-
 
 
 
@@ -92,21 +85,25 @@
 		                 $serv_img = get_sub_field('serv_img'); 
 		                 $serv_txt = get_sub_field('serv_txt');
 		                 ?>
-
+						
+						
 		                 <div class="col-xs-12 col-lg-3" class="body" style=" margin-top: 50px;">
+		                 	<a  class="serv-card" href="<?php the_sub_field('serv_link');?>" target="_blank" >
+		                 	<div class="card">
+		                 		<h2 class="home-serv"><?php if( $name_txt ): echo $name_txt; endif; ?></h2>
 		                 	
-		                 	<h2 class="home-serv"><?php if( $name_txt ): echo $name_txt; endif; ?></h2>
-		                 	
-							<img src="<?php if( $serv_img ): echo $serv_img; endif; ?>" />
+								<img src="<?php if( $serv_img ): echo $serv_img; endif; ?>" />
 							
-							<p class="home-serv"><?php if( $serv_txt ): echo $serv_txt; endif; ?></p>
-							
+								<p class="home-serv"><?php if( $serv_txt ): echo $serv_txt; endif; ?></p>
+							</div>
+							</a>
 						</div>
+					
 		            <?php endwhile;
 		          endif; ?>
-
-
-		          <div class="col-lg-12">
+				
+				
+		          <div class=" d-none d-md-block col-lg-12">
 							<a  class="services-button" href="<?php the_field('serv_button');?>" target="_blank" style="color:white;">Explore More</a>
 					</div>
 
@@ -120,7 +117,7 @@
 		
 			<div class="row" >
 				<!--Resources Section-->
-    			<div class="col-xs-12 col-lg-6">
+    			<div class="col-s-12 col-lg-6">
     				
       				<h2 style="margin-top:40px; text-align: left-center; "><?php the_field('resources_left'); ?></h2>	
 					
@@ -130,8 +127,8 @@
     			</div>	
 				<!--Blog Section-->
 
-    			<div class="col-xs-12 col-lg-6" style="background-color: #8ec11a; height:600px;" > 
-
+    			<div class="col-s-12 col-lg-6" style="background-color: #8ec11a; height:600px;" > 
+				<a  class="blog-right" href="<?php the_sub_field('blog_link');?>" target="_blank" >
       				<h2 style="margin-top:40px; text-align: center-right; color:white; "><?php the_field('blog_right'); ?></h2>	
 
       				<?php
@@ -154,12 +151,12 @@
 							<a href="<?php echo get_permalink() ?>">
 							<!--Title Blog-->
 						<?php 
-							echo '<h1 class="blog_preview" ">' . get_the_title() . '</h1>'; 
+							echo '<h1 class="blog-preview" ">' . get_the_title() . '</h1>'; 
 							?>
 							</a>
-						<div class="blog_preview">
+						<div class="blog-preview">
 							<?php  
-								echo '<p class="blog_preview" ">' . get_the_content() . '</p>'; 
+								echo '<p class="blog-preview" ">' . get_the_content() . '</p>'; 
 
 							?>
 						</div>
@@ -177,10 +174,9 @@
 
 					?>
 
-
+				</a>
     			</div>	
-				<div col-lg-3>
-					</p>
+				
 				</div>
     		</div>
     	</div>

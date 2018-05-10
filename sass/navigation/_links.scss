@@ -59,8 +59,7 @@ ul#menu-test-menu.menu li a:hover{
 a.services-button {
 	display: block;
 	display: inline-block;
-	display:center;
-	margin-left:470px;
+	margin-left:42%;
 	margin-bottom: 30px;
 	border: 1px solid;
 	border-color: $color__border-button;
@@ -80,4 +79,69 @@ a.services-button {
 		border-color: $color__border-button-focus;
 	}
 
+}
+
+a.call-button {
+	display: block;
+	display: inline-block;
+	margin-left:43%;
+	margin-bottom: 30px;
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 5px;
+	background: #8ec11a/*$color__background-button**/;
+	color: rgba(0, 0, 0, .8);
+	@include font-size(1);
+	line-height: 2;
+	padding: .70em 2em .4em;
+	
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+
+}
+
+a.serv-card {
+	color: none;
+	text-decoration: none;
+	
+
+	&:visited {
+		color: #404040;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: #404040;
+		text-shadow: none;
+	}
+	
+	&:focus {
+		outline: none;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+		color:none;
+	}
+
+	svg {
+		color: none;
+	}
+
+	svg:hover{
+		color: none;
+	}
+	
+	
+
+}
+
+a.blog-right {
+	
 }

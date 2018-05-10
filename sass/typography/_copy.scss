@@ -49,19 +49,14 @@ p.home-serv{
 	margin-top: 0px;
 	text-align: center;
 	line-height: 2;
-	border-style: dotted;
-	border-radius:1em;
-	border-color:#FFD700;
+	padding: 15px;
+	
 
 }
 
 
 p.blog-preview{
 	color:white;
-	margin-top: 20px;
-	margin-bottom: 40px; 
-	margin-left:20px;
-	margin:20px;
 	text-align: center;  
 	min-height:250px; 
 	max-height:100px; 
@@ -69,17 +64,10 @@ p.blog-preview{
 	float:right;
 }
 
-p.service-includes {
 
-	font-size: 19px; 
-	border-bottom-style:solid;
-	padding-bottom: 0px;
-	text-align:left;
-	display:block;
-	display:inline-block;
-}
 p.service-how{
 	font-size: 19px;
+	padding: 20px 40px 40px 40px;
 	text-align: center;
 	float:left;
 

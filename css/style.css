@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@import url(slick-theme.css);
 @font-face {
   font-family: montserrat;
   src: url(Documents/wp-knit/wp-content/themes/knit-theme/fonts/Montserrat-Regular.otf);
@@ -436,32 +437,19 @@ p.home-serv {
   margin-top: 0px;
   text-align: center;
   line-height: 2;
-  border-style: dotted;
-  border-radius: 1em;
-  border-color: #FFD700; }
+  padding: 15px; }
 
 p.blog-preview {
   color: white;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin-left: 20px;
-  margin: 20px;
   text-align: center;
   min-height: 250px;
   max-height: 100px;
   padding-top: 20%;
   float: right; }
 
-p.service-includes {
-  font-size: 19px;
-  border-bottom-style: solid;
-  padding-bottom: 0px;
-  text-align: left;
-  display: block;
-  display: inline-block; }
-
 p.service-how {
   font-size: 19px;
+  padding: 20px 40px 40px 40px;
   text-align: center;
   float: left; }
 
@@ -508,10 +496,16 @@ figure {
 
 .jumbotron {
   border-radius: 0;
-  height: 700px; }
+  min-height: 700px;
+  height: 100%;
+  height: auto; }
 
-.slider {
-  color: red; }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s; }
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
 
 ul, ol {
   margin: 0 0 1.5em 0;
@@ -546,6 +540,12 @@ ul.fa-ul {
 ul.menu {
   line-height: 2;
   font-weight: 600; }
+
+li.services-includes {
+  text-align: left;
+  border-bottom: 1px solid #000;
+  border-radius: 100px;
+  padding: 3px; }
 
 table {
   margin: 0 0 1.5em;
@@ -689,8 +689,7 @@ ul#menu-test-menu.menu li a:hover {
 a.services-button {
   display: block;
   display: inline-block;
-  display: center;
-  margin-left: 470px;
+  margin-left: 42%;
   margin-bottom: 30px;
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
@@ -705,6 +704,43 @@ a.services-button {
     border-color: #ccc #bbb #aaa; }
   a.services-button:active, a.services-button:focus {
     border-color: #aaa #bbb #bbb; }
+
+a.call-button {
+  display: block;
+  display: inline-block;
+  margin-left: 43%;
+  margin-bottom: 30px;
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 5px;
+  background: #8ec11a;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 2;
+  padding: .70em 2em .4em; }
+  a.call-button:hover {
+    border-color: #ccc #bbb #aaa; }
+  a.call-button:active, a.call-button:focus {
+    border-color: #aaa #bbb #bbb; }
+
+a.serv-card {
+  color: none;
+  text-decoration: none; }
+  a.serv-card:visited {
+    color: #404040; }
+  a.serv-card:hover, a.serv-card:focus, a.serv-card:active {
+    color: #404040;
+    text-shadow: none; }
+  a.serv-card:focus {
+    outline: none; }
+  a.serv-card:hover, a.serv-card:active {
+    outline: 0;
+    color: none; }
+  a.serv-card svg {
+    color: none; }
+  a.serv-card svg:hover {
+    color: none; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -781,6 +817,21 @@ a.services-button {
     margin-right: 15px;
     margin-top: 20px; }
   .menu-home li a {
+    color: white; }
+
+.menu-header {
+  height: 70px;
+  background: gold;
+  background: linear-gradient(90deg, gold 0%, #8ec11a 66%); }
+  .menu-header ul {
+    float: right;
+    margin-top: -15px; }
+  .menu-header li {
+    float: left;
+    padding-right: 25px;
+    margin-right: 15px;
+    margin-top: 20px; }
+  .menu-header li a {
     color: white; }
 
 header {
