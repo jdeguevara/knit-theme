@@ -115,7 +115,11 @@
 
 
 	ul {
+
 		float: right;
+
+		float:right;
+
 		margin-top: -15px;
 		
 	}
@@ -124,13 +128,33 @@
 			float:left;
 			padding-right:25px;
 			margin-right:15px;
+			margin-top:20px;
 		}
 
 		li a {
-
+			
 			color:white;
 		}
-	
-	
+}
+.navbar {
+	background: #404040;
+	padding: 0;
+	max-height: 55px;
+}
 
+ul#menu-primary-menu{
+	margin-bottom: 0;
+}
+
+.menu-main ul{
+	float: right;
+}
+
+.menu-main li {
+	float: left;
+	padding: 0 10px;
+}
+
+li a{
+	font-weight: 400;
 }

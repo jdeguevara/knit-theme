@@ -13,7 +13,7 @@
 
 	<div class="entry-content">
 		<div class="row">
-			<div class="col-xs-12 col-lg-4">
+			<div class="col-xs-12 col-lg-4 shadow">
 				<?php the_post_thumbnail() ?>
 			</div>
 			<div class="col-xs-12 col-lg-8" style="margin-top: 15px;">

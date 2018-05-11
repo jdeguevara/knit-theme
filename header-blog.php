@@ -17,8 +17,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="/wp-content/themes/knit-theme/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="/wp-content/themes/knit-theme/slick/slick-theme.css"/>
 	
 	
 	<?php wp_head(); ?>
@@ -30,36 +30,36 @@
 <div id="page" class="site">
 
 
-	<!-- #masthead -->
+	<nav class="navbar">
+		<div class="container" style="padding: 0;">
+			<div class="col-xs-12 col-sm-3 col-lg-3">
+				<a class="navbar-brand" href="/">
+					<img class="header-logo" src="/wp-content/uploads/2018/05/KNIT-logo-23-e1484944550631.png" />
+				</a>
+			</div>
+			<div class="navbar-collapse menu-main col-xs-12 col-sm-9 col-lg-9">
+			<?php 
+			wp_nav_menu( array( 
+					'theme_location' => 'menu-1',
+					'container' => false,
+					'walker' => new Walker_Nav_Primary() 
+					) 
+				); 
+			?>
+			</div>
+		</div>
+	</nav>
 
 	<header id="masthead" class="site-header row">
-<div class="container">
-	<div class="row">
-		<div class="col-xs-8 col-lg-8">
-			<a href="/blog"><h1 style="color: white;">  Blog</h1></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="/blog"><h1 style="color: white;">  Blog</h1></a>
 
-			<?php rewind_posts(); ?>
+					<?php rewind_posts(); ?>
+				</div>
+			</div>
 		</div>
-		
-		<div class="col-xs-4 col-lg-4">
-
-
-			<div class="dropleft show" style="float: right;">
-  <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img class="header-logo" src="/wp-content/uploads/2018/04/KNIT-logo-1-3-e1473634703799.png" />
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="padding: 15px; background-color: rgba(250, 250, 250, 0.95);">
-		<?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
-  </div>
-</div>
-
-		</div>
-
-
-			
-	</div>
-</div>
 
 	</header><!-- #masthead -->
 

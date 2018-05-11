@@ -90,3 +90,29 @@ a.url.fn.n{
 .blog-link:hover{
 	background-color: $color__green-yellow;
 }
+
+a.services-button {
+	display: block;
+	display: inline-block;
+	display:center;
+	margin-left:470px;
+	margin-bottom: 30px;
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 5px;
+	background: #8ec11a/*$color__background-button**/;
+	color: rgba(0, 0, 0, .8);
+	@include font-size(1);
+	line-height: 2;
+	padding: .70em 2em .4em;
+	
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+
+}

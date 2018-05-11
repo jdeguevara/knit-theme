@@ -159,17 +159,21 @@ add_action( 'widgets_init', 'knit_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function knit_theme_scripts() {
+
+	$now = new DateTime();
+	$timestamp = $now->getTimestamp();
+
 	wp_enqueue_style( 'knit-theme_bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css');
-	wp_enqueue_style( 'knit-theme-style', get_stylesheet_uri() );
-    wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.1/js/all.js', array(), null );
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Voltaire', false ); 
+	wp_enqueue_style( 'knit-theme-style', get_stylesheet_uri(), array(), $timestamp, 'all'  );
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Voltaire', false );
 
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('knit-theme_bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20170710', true );
+	wp_enqueue_script('knit-theme_bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.0' , true );
+	wp_enqueue_script('knit-theme_js', get_template_directory_uri() . '/js/knit.js', array('jquery'), $timestamp , true );
 	wp_enqueue_script( 'knit-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'knit-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'popper_js', 'https://unpkg.com/popper.js', array(), null );
-
+	wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.1/js/all.js', array(), null );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -196,6 +200,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Include Walker File
+ */
+require get_template_directory() . '/inc/walker.php';
 
 /**
  * Load Jetpack compatibility file.

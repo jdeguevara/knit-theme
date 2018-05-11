@@ -19,26 +19,29 @@ object {
 	display: inline-block;
 }
 
+
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 	margin: 15px auto;
 }
 
+img.shadow{
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
 img.about{
 	margin: 0 auto;
 	padding: 0;
 	max-width: 450px;
-	box-shadow: 11px -5px 30px 3px rgba(0,0,0,.2);
 }
 
 img.team-photo{
-	max-width: 250px;
+	max-width: 200px;
 	margin:20px 0 10px 0;
 }
 
 img.doodle {
-	
 	display: center;  
   	justify-content: space-between;
   	max-width: 80%;
@@ -47,7 +50,6 @@ img.doodle {
 }
 
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
-	box-shadow: 3px -1px 25px 3px rgba(0, 0, 0, 0.35)
 }
 
 img.no-margin{

@@ -51,7 +51,6 @@
 		          <div  class="button">
 							<a href="<?php the_field('serv_button'); ?>" target="_blank">Explore More</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -59,86 +58,15 @@
 <!--Slider-->
 
 <div class="slider">
-	<p>kajsklj</p>
-	<p>kajsklj</p>
-	<p>kajsklj</p>
-	<p>kajsklj</p>
-
-
-
-
+	<div class="col-lg-12">
+		<div class="row">
+			<p>kajsklj</p>
+			<p>kajsklj</p>
+			<p>kajsklj</p>
+			<p>kajsklj</p>
+		</div>
+	</div>
 </div>
-
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-      $('.slider').slick({
-        setting-name: setting-value
-      });
-    });
- </script>
-<script type="text/javascript">
-
- $('.slider').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-  ]
-});
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -15,7 +15,7 @@
 				<p style="font-size: 19px;"><?php the_field('section_text_1'); ?></p>
 			</div>
 			<div class="col-xs-12 col-md-6 text-center">
-				<img class="about" src="<?php the_field('section_image_1'); ?>" />
+				<img class="about shadow" src="<?php the_field('section_image_1'); ?>" />
 			</div>
 		</div>
 	</div>
@@ -28,7 +28,7 @@
 			<div class="col-xs-12 col-md-6 text-center">
 			<?php if( get_field('section_image_2') ): ?>
 
-				<img class="about" src="<?php the_field('section_image_2'); ?>" />
+				<img class="about shadow" src="<?php the_field('section_image_2'); ?>" />
 
 				<?php endif; ?>
 			</div>
@@ -89,7 +89,7 @@
              <div class="col-xs-12 col-md-6" >
              	<div class="team-card-container">
 	             	<div class="team-card">
-		             	<div class="team-photo" >
+		             	<div class="team-photo shadow" >
 		             	<img class="no-margin" src="<?php if( $Lphoto ): echo $Lphoto; endif; ?>" />
 
 			             	<div class="team-title">
@@ -97,7 +97,7 @@
 				             	<p><?php if( $Ltitle ): echo $Ltitle; endif; ?></p>
 			             	</div>
 						</div>
-						<div class="team-card-back">
+						<div class="team-card-back shadow">
 							<p><?php if( $Lbio ): echo $Lbio; endif; ?></p>
 						</div>
 					</div>
@@ -123,14 +123,14 @@
              <div class="col-xs-12 col-md-4">
 				<div class="team-card-container">
 	             	<div class="team-card">     	
-             			<div class="team-photo">
+             			<div class="team-photo shadow">
              			<img class="no-margin" src="<?php if( $photo ): echo $photo; endif; ?>" />
              				<div class="team-title">
 				             	<h4 style="margin-bottom: 0px; padding-top: 10%"><?php if( $name ): echo $name; endif; ?></h4>
 				             	<p><?php if( $title ): echo $title; endif; ?></p>
 				             </div>
 						</div>
-						<div class="team-card-back">
+						<div class="team-card-back shadow">
 							<p><?php if( $bio ): echo $bio; endif; ?></p>
 						</div>
 					</div>
@@ -165,26 +165,25 @@
 		                 $advBio = get_sub_field('adv_bio'); ?>
 			
 			<div class="col-xs-12 col-md-6">
-             	<div class="team-card-container">
-	             	<div class="team-card">     	
-             			<div class="team-photo">
-             				<img class="no-margin" src="<?php if( $advPhoto ): echo $advPhoto; endif; ?>"/>
-             				<div class="team-title">
+            	<div id="js-flip-1" class="flip">
+					<div class="card">
+						<div class="face front shadow">
+							<img class="no-margin" src="<?php if( $advPhoto ): echo $advPhoto; endif; ?>"/>
+							<div class="team-title">
 				             	<h4 style="margin-bottom: 0px;"><?php if( $advName ): echo $advName; endif; ?></h4>
 				             	<p><?php if( $advTitle ): echo $advTitle; endif; ?></p>
 				             </div>
 						</div>
-						<div class="team-card-back">
+						<div class="face back shadow">
 							<p><?php if( $advBio ): echo $advBio; endif; ?></p>
 						</div>
 					</div>
 				</div>
-
 			</div>
-		<?php endwhile;
-		endif; ?>	
+			<?php endwhile;
+			endif; ?>            
+		</div>
 	</div>
-</div>
 </div>
 
 <!-- Collaborate -->
@@ -206,3 +205,4 @@
 </div>
 
 <?php get_footer(); 
+

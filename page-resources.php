@@ -18,7 +18,7 @@ get_header(); ?>
 
 					$args = array(
 
-					"cat" => 30,
+					"cat" => 18,
 					"posts_per_page" => 1
 
 					);
@@ -58,7 +58,7 @@ get_header(); ?>
 
 				$args = array(
 
-				"cat" => 30,
+				"cat" => 18,
 				"posts_per_page" => 3, 
 				'offset' => '1'
 
@@ -132,7 +132,7 @@ get_header(); ?>
 
 					$args = array(
 
-					"cat" => 71,
+					"cat" => 72,
 					"posts_per_page" => 1
 
 					);
@@ -172,7 +172,7 @@ get_header(); ?>
 
 				$args = array(
 
-				"cat" => 71,
+				"cat" => 72,
 				"posts_per_page" => 3, 
 				'offset' => '1'
 

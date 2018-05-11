@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	color:#8ec11a;
+	color:$color__green;
 	font-family: 'Voltaire', sans-serif;
 }
 
@@ -30,3 +30,7 @@ h6{
 	font-size: 14px;
 }
 
+h2.home-serv {
+	color:#FFD700;
+
+}
